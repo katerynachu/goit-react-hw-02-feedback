@@ -1,7 +1,9 @@
+import { Button } from "./FeedbackButton.styled"
 export const FeedbackButton = ({name,onClick}) => {
+
  return(
     <>
-    <button onClick={onClick}>{name}</button>
+    <Button onClick={onClick}>{name}</Button>
     </>
  )
 }

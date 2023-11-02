@@ -1,7 +1,8 @@
 import { FeedbackButton } from "components/FeedbackButton/FeedbackButton"
+import {Board} from './FeedbackOptions.styled'
 export const FeedbackOptions = ({options,onLeaveFeedback}) =>{
     return(
-        <>
+        <Board>
         <FeedbackButton
         onClick={()=> onLeaveFeedback('good')}
         name={'good'}
@@ -14,6 +15,6 @@ export const FeedbackOptions = ({options,onLeaveFeedback}) =>{
           onClick={()=> onLeaveFeedback('bad')}
           name={'bad'}
         />
-        </>
+        </Board>
     )
 }
