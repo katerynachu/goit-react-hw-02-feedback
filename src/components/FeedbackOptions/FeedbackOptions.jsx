@@ -1,20 +1,15 @@
-import { FeedbackButton } from "components/FeedbackButton/FeedbackButton"
-import {Board} from './FeedbackOptions.styled'
-export const FeedbackOptions = ({options,onLeaveFeedback}) =>{
-    return(
-        <Board>
+import { FeedbackButton } from 'components/FeedbackButton/FeedbackButton';
+import { Board } from './FeedbackOptions.styled';
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return (
+    <Board>
+      {options.map(option => (
         <FeedbackButton
-        onClick={()=> onLeaveFeedback('good')}
-        name={'good'}
+          key={option}
+          onClick={() => onLeaveFeedback(option )}
+          name={option}
         />
-        <FeedbackButton
-          onClick={()=> onLeaveFeedback('neutral')}
-          name={'neutral'}
-        />
-        <FeedbackButton
-          onClick={()=> onLeaveFeedback('bad')}
-          name={'bad'}
-        />
-        </Board>
-    )
-}
+      ))}
+    </Board>
+  );
+};
